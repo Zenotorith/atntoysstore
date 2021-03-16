@@ -88,6 +88,7 @@
             </div>
           </div>
           <!---End of Title-->
+          <div class="row">
         <?php     
         require_once 'connectDB.php';
         $con = connectDB();
@@ -95,9 +96,8 @@
         $result = pg_query($con, $query);                                    
         while($row = pg_fetch_array($result)){
           $moredetail ="product-page.php?id=".$row['pdID']; ?>
-              <div class="row">
                 <!--first item-->
-                <div class="d-flex flex-wrap text-uppercase justify-content-center">
+                <div class="col-sm-6">
                   <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
                     <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img
                     img-top">
