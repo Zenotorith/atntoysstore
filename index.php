@@ -90,8 +90,8 @@
           <!---End of Title-->
         <?php     
         require_once 'connectDB.php';
-        $con = ConnectDB();
-        $query = "SELECT * FROM products ORDER BY 'pdID' ASC ";
+        $con = connectDB();
+        $query = "SELECT * FROM products";
         $result = pg_query($con, $query);                                    
         while($row = pg_fetch_array($result)){
         $moredetail ="product-page.php?id=".$row['pdID']; ?>
