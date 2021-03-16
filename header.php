@@ -58,10 +58,6 @@
                 <a href="index.php#contract" class="nav-link">Contact</a>
               </li>
                 <li class="nav-item">
-                  <a href="register.php" class="nav-link" style="color:white" >Hello <?php echo $_SESSION['user'] ?></a>
-                </li>
-                <a href="logout.php" class="px-2">Sign out</a>
-                <li class="nav-item">
                   <a href="shopping-cart.php" class="nav-link"><i class="fas fa-shopping-cart fa-2x"></i></a>
                 </li>
             </ul>
