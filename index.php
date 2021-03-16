@@ -94,11 +94,11 @@
         $query = "SELECT * FROM products";
         $result = pg_query($con, $query);                                    
         while($row = pg_fetch_array($result)){
-        $moredetail ="product-page.php?id=".$row['pdID']; ?>
+          $moredetail ="product-page.php?id=".$row['pdID']; ?>
             <div class="row">
            <div class="col-sm-6 ">
               <div class="seller-item">
-                <img src="assets/images/<?php echo $row['pdImage']; ?>" alt="" class="img-fluid photo">
+                <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid photo">
                 <p><?php echo $row['pdName']; ?></p>
                </div>
             </div>
@@ -108,44 +108,12 @@
                 <!--first item-->
                 <div class="col-sm-6">
                   <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
-                    <img src="assets/images/<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img">
+                    <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img">
                     
                     <p><?php echo $row['pdName']; ?></p>
                   </div>
                 </div>
                 <!--End of 1st item-->
-                 <!--first item-->
-                 <div class="col-sm-6">
-                  <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
-                    <img src="assets/images/<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img">
-                    
-                    <p><?php echo $row['pdName']; ?></p>
-                  </div>
-                </div>
-                <!--End of 1st item-->       
-              </div>
-              <!--end of row-->
-              <div class="row">
-                <!--first item-->
-                <div class="col-sm-6">
-                  <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
-                    <img src="assets/images/<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img
-                    img-top">
-                    
-                    <p><?php echo $row['pdName']; ?></p>
-                  </div>
-                </div>
-                <!--End of 1st item-->
-                 <!--first item-->
-                 <div class="col-sm-6">
-                  <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
-                    <img src="assets/images/<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img
-                    img-top">
-                    
-                    <p><?php echo $row['pdName']; ?></p>
-                  </div>
-                </div>
-                <!--End of 1st item-->       
               </div>
             </div>
           </div>
