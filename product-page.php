@@ -15,9 +15,9 @@
                     require_once 'connectDB.php';
                     $con = connectDB(); 
                     $id = $_GET['id'];
-                    $query = "SELECT * FROM products ORDER BY pdID=$id";
+                    $query = "SELECT * FROM products HAVING pdID=$id";
                     $result = pg_query($con, $query);
-                    $row = pg_fetch_array($result);              
+                    $row = pg_fetch_assoc($result);              
                     ?>
 
                         <img class="img-fluid" src="<?php echo $row['pdImage']; ?>">
