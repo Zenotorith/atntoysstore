@@ -16,9 +16,7 @@
                     $con = connectDB(); 
                     $id = $_GET['id'];
                     $query = "SELECT * FROM products WHERE pdID=".$_GET['id'];
-                    $result = pg_query($con, $query);
-                    echo $result;
-                    echo $query;
+                    $result = pg_fetch_assoc($con, $query);
                     $row = pg_fetch_array($result);                   
                     ?>
 
