@@ -17,7 +17,7 @@
                     $id = $_GET['id'];
                     $query = "select * from products where pdID=$id";
                     $result = pg_query($con, $query);
-                    $row = pg_fetch_assoc($result);
+                    $row = pg_fetch_array($result);
                     ?>
 
                         <img class="img-fluid" src="<?php echo $row['pdImage']; ?>">
