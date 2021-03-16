@@ -102,11 +102,8 @@
                 <p><?php echo $row['pdName']; ?></p>
                </div>
             </div>
-            <!--End of first column-->
-            <div class="col-sm-6 d-flex flex-column justify-content-between">
-              <div class="row">
                  <!--first item-->
-                 <div class="col-sm-6">
+                 <div class="col-sm-3">
                   <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
                     <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img">
                     
