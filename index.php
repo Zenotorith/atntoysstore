@@ -105,15 +105,6 @@
             <!--End of first column-->
             <div class="col-sm-6 d-flex flex-column justify-content-between">
               <div class="row">
-                <!--first item-->
-                <div class="col-sm-6">
-                  <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
-                    <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img">
-                    
-                    <p><?php echo $row['pdName']; ?></p>
-                  </div>
-                </div>
-                <!--End of 1st item-->
                  <!--first item-->
                  <div class="col-sm-6">
                   <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
@@ -124,28 +115,6 @@
                 </div>
                 <!--End of 1st item-->       
               </div>
-              <!--end of row-->
-              <div class="row">
-                <!--first item-->
-                <div class="col-sm-6">
-                  <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
-                    <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img
-                    img-top">
-                    
-                    <p><?php echo $row['pdName']; ?></p>
-                  </div>
-                </div>
-                <!--End of 1st item-->
-                 <!--first item-->
-                 <div class="col-sm-6">
-                  <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
-                    <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img
-                    img-top">
-                    
-                    <p><?php echo $row['pdName']; ?></p>
-                  </div>
-                </div>
-                <!--End of 1st item-->       
               </div>
             </div>
           </div>
