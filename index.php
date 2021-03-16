@@ -98,7 +98,7 @@
            <div class="col-12 col-md-6 col-lg-4">
             <div class="clean-product-item">
               <div class="image"><a href="<?php echo $moredetail ?>"><img class="img-fluid d-block mx-auto" src="<?php echo $row['pdImage'] ?>" style="height: 220px;width: 220px;"></a></div>
-                <div class="product-name"><a href="#" style="margin-left: 40px;"><?php echo $row['pdName'] ?></a></div>
+                <div class="product-name"><a href="<?php echo $moredetail ?>" style="margin-left: 40px;"><?php echo $row['pdName'] ?></a></div>
                   <div class="about">
                     <div class="price">
                       <h3 style="margin-left: 143px;">$<?php echo $row['pdPrice'] ?></h3>

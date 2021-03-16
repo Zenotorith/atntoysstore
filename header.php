@@ -57,14 +57,6 @@
               <li class="nav-item">
                 <a href="index.php#contract" class="nav-link">Contact</a>
               </li>
-              <?php if(!isset($_SESSION['user'])){ ?>
-                <li class="nav-item">
-                  <a href="login.php" class="nav-link">Sign in</a>
-                </li>
-                <li class="nav-item">
-                  <a href="register.php" class="nav-link">or Sign up</a>
-                </li>
-              <?php }else{ ?>
                 <li class="nav-item">
                   <a href="register.php" class="nav-link" style="color:white" >Hello <?php echo $_SESSION['user'] ?></a>
                 </li>
@@ -72,7 +64,6 @@
                 <li class="nav-item">
                   <a href="shopping-cart.php" class="nav-link"><i class="fas fa-shopping-cart fa-2x"></i></a>
                 </li>
-              <?php } ?> 
             </ul>
           </div>
         </div>
