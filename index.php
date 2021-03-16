@@ -96,7 +96,7 @@
         while($row = pg_fetch_array($result)){
           $moredetail ="product-page.php?id=".$row['pdID']; ?>
                  <!--first item-->
-                 <div class="col-sm-3">
+                 <div class="col">
                   <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
                     <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img">
                     
@@ -111,7 +111,7 @@
          </div> 
     </section>
       <!---End of Best Seller-->
-      <?php }  echo "Con cá"; ?>
+      <?php } ?>
       <!--Contact us Section-->
        <!--Contact US-->
     <section id="contract" class="contact py-5">
