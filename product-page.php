@@ -20,7 +20,7 @@
                     $row = pg_fetch_assoc($result);
                     ?>
 
-                        <img class="img-fluid" src="<?php echo $row['pdImage']; ?>">
+                        <img class="img-fluid" src="assets/images/<?php echo $row['pdImage']; ?>">
 
                             </div>
                             <div class="col-md-6">
