@@ -97,7 +97,7 @@
           $moredetail ="product-page.php?id=".$row['pdID']; ?>
               <div class="row">
                 <!--first item-->
-                <div class="col-sm-1 d-flex flex-wrap text-uppercase justify-content-center">
+                <div class="d-flex flex-wrap text-uppercase justify-content-center">
                   <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
                     <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img
                     img-top">
