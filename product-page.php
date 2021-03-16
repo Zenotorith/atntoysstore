@@ -14,11 +14,9 @@
                     <?php
                     require_once 'connectDB.php';
                     $con = connectDB(); 
-                    $id = $_GET['id'];
+                    $id = $_GET["id"];
                     $result = pg_query($con, "SELECT * FROM products WHERE pdID=$id");
-                    $row = pg_fetch_assoc($result); 
-                    echo $id;  
-                    echo $row;                
+                    $row = pg_fetch_array($result);              
                     ?>
 
                         <img class="img-fluid" src="<?php echo $row['pdImage']; ?>">
