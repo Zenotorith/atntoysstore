@@ -5,7 +5,7 @@ function connectDB() {
     if (!$con) {
     echo "Database connection failed.";
     } else {
-     echo "Database connection success.";
-}
+        return $con;
+    }
 }
 ?>

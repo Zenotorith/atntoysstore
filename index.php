@@ -98,7 +98,7 @@
             <div class="row">
            <div class="col-sm-6 ">
               <div class="seller-item">
-                <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid photo">
+                <img src="assets/images/<?php echo $row['pdImage']; ?>" alt="" class="img-fluid photo">
                 <p><?php echo $row['pdName']; ?></p>
                </div>
             </div>
@@ -108,7 +108,7 @@
                 <!--first item-->
                 <div class="col-sm-6">
                   <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
-                    <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img">
+                    <img src="assets/images/<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img">
                     
                     <p><?php echo $row['pdName']; ?></p>
                   </div>
@@ -117,7 +117,7 @@
                  <!--first item-->
                  <div class="col-sm-6">
                   <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
-                    <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img">
+                    <img src="assets/images/<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img">
                     
                     <p><?php echo $row['pdName']; ?></p>
                   </div>
@@ -129,7 +129,7 @@
                 <!--first item-->
                 <div class="col-sm-6">
                   <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
-                    <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img
+                    <img src="assets/images/<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img
                     img-top">
                     
                     <p><?php echo $row['pdName']; ?></p>
@@ -139,7 +139,7 @@
                  <!--first item-->
                  <div class="col-sm-6">
                   <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
-                    <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img
+                    <img src="assets/images/<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img
                     img-top">
                     
                     <p><?php echo $row['pdName']; ?></p>
