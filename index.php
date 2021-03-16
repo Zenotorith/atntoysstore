@@ -95,23 +95,23 @@
         $result = pg_query($con, $query);                                    
         while($row = pg_fetch_array($result)){
           $moredetail ="product-page.php?id=".$row['pdID']; ?>
-                 <!--first item-->
-                 <div class="col">
+              <div class="row">
+                <!--first item-->
+                <div class="col-sm-1 d-flex flex-wrap text-uppercase justify-content-center">
                   <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
-                    <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img">
-                    
+                    <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img
+                    img-top">
                     <p><?php echo $row['pdName']; ?></p>
                   </div>
                 </div>
-                <!--End of 1st item-->       
-              </div>
+                <!--End of 1st item-->
               </div>
             </div>
           </div>
          </div> 
     </section>
       <!---End of Best Seller-->
-      <?php } ?>
+      <?php }  echo "Con cá"; ?>
       <!--Contact us Section-->
        <!--Contact US-->
     <section id="contract" class="contact py-5">
