@@ -11,11 +11,11 @@
                     <div class="product-info">
                         <div class="row">
                         <div class="col-md-6">
-                            <?php
-                        require_once 'connectDB.php';
+                    <?php
+                    require_once 'connectDB.php';
                     $con = connectDB(); 
                     $id = $_GET['id'];
-                    $query = "SELECT * FROM products WHERE pdID=$id";
+                    $query = "SELECT * FROM products WHERE pdID='$id'";
                     $result = pg_query($con, $query);
                     echo $result;
                     $row = pg_fetch_array($result);                   
