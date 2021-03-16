@@ -77,18 +77,17 @@
       </section>
       <!---End of About Section---->
       <!--Best Seller Products-->
-      <section id="products" class="seller py-5">
-        <div class="container">
-          <!--Section title-->
-          <div class="row mb-5">
-            <div class="col d-flex flex-wrap text-uppercase justify-content-center">
-              <h1 class="font-weight-bold align-self-center mx-1">
-                Best Seller Products
-              </h1>
-            </div>
-          </div>
-          <!---End of Title-->
-          <div class="row">
+      <main class="page catalog-page">
+        <section class="clean-block clean-catalog dark">
+            <div class="container">
+                <div class="block-heading">
+                    <h1>Catalog Page</h1>
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="products" style="margin-right: -318px;">
+                                <div class="row no-gutters">
         <?php     
         require_once 'connectDB.php';
         $con = connectDB();
@@ -96,24 +95,35 @@
         $result = pg_query($con, $query);                                    
         while($row = pg_fetch_array($result)){
           $moredetail ="product-page.php?id=".$row['pdID']; ?>
-            <div class="col-sm-6 d-flex flex-column justify-content-between">
-              <div class="row">
-                <!--first item-->
-                <div class="col-sm-2">
-                  <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
-                    <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img">
-                    
-                    <p><?php echo $row['pdName']; ?></p>
+           <div class="col-12 col-md-6 col-lg-4">
+            <div class="clean-product-item">
+              <div class="image"><a href="<?php echo $moredetail ?>"><img class="img-fluid d-block mx-auto" src="<?php echo $row['pdImage'] ?>"></a></div>
+                <div class="product-name"><a href="#" style="margin-left: 40px;"><?php echo $row['pdName'] ?></a></div>
+                  <div class="about">
+                    <div class="price">
+                      <h3 style="margin-left: 143px;">$<?php echo $row['pdPrice'] ?></h3>
+                    </div>
                   </div>
                 </div>
-                <!--End of 1st item-->
               </div>
-            </div>
-          </div>
-         </div> 
-    </section>
       <!---End of Best Seller-->
-      <?php }  echo "Con cá"; ?>
+      <?php } ?>
+      <nav>
+        <ul class="pagination">
+          <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    </main>
       <!--Contact us Section-->
        <!--Contact US-->
     <section id="contract" class="contact py-5">
