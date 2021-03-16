@@ -96,11 +96,13 @@
         $result = pg_query($con, $query);                                    
         while($row = pg_fetch_array($result)){
           $moredetail ="product-page.php?id=".$row['pdID']; ?>
+            <div class="col-sm-6 d-flex flex-column justify-content-between">
+              <div class="row">
                 <!--first item-->
-                <div class="col-sm-6">
+                <div class="col-sm-2">
                   <div class="seller-item"><a href="<?php echo $moredetail; ?>"></a>
-                    <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img
-                    img-top">
+                    <img src="<?php echo $row['pdImage']; ?>" alt="" class="img-fluid seller-img">
+                    
                     <p><?php echo $row['pdName']; ?></p>
                   </div>
                 </div>
