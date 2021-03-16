@@ -15,7 +15,7 @@
                     require_once 'connectDB.php';
                     $con = connectDB(); 
                     $id = $_GET['id'];
-                    $query = "SELECT * FROM products";
+                    $query = "SELECT * FROM products ORDER BY pdID=$id";
                     $result = pg_query($con, $query);
                     $row = pg_fetch_array($result);              
                     ?>
