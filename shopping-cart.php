@@ -16,7 +16,6 @@
                         require_once 'connectDB.php'; 
                         $con = connectDB(); 
                         $id_next = $_SESSION['id'];
-                        echo $id_next;
                         $query = "SELECT * FROM products WHERE \"pdID\"='$id_next'";
                         $result = pg_query($con, $query);
                         $row = pg_fetch_assoc($result);
