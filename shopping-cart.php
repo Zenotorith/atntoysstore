@@ -38,7 +38,7 @@
                                           <form method="post" action="shopping-cart.php">
                                              <label class="d-none d-md-block" for="quantity">Quantity</label>
                                              <input type="number" name="quantity" id="number" class="form-control quantity-input" value="1"><br>
-                                             <button type="submit" name="add_item" class="btn btn-primary btn-block btn-md text-info">Add item</button>
+                                             <button type="submit" name="add_item" class="btn btn-primary btn-block btn-md">Add item</button>
                                            </form>
                                         </div>         
                                     </div>
