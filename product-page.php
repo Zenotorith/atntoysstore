@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require "header.php"
 ?>
     <main class="page product-page">
@@ -15,7 +16,7 @@
                     <?php
                     require_once 'connectDB.php';
                     $con = connectDB(); 
-                    $id = $_GET['id'];
+                    $_SESSION['id'] = $_GET['id'];
                     $query = "SELECT * FROM products WHERE \"pdID\"='$id'";
                     $result = pg_query($con, $query);
                     $row = pg_fetch_assoc($result);              

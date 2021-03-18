@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     require "header.php"
   
 ?>
@@ -15,7 +15,7 @@
                     <?php 
                         require_once 'connectDB.php'; 
                         $con = connectDB(); 
-                        $id_next = $_GET['id'];
+                        $id_next = $_SESSION['id'];
                         echo $id_next;
                         $query = "SELECT * FROM products WHERE \"pdID\"='$id_next'";
                         $result = pg_query($con, $query);
