@@ -17,7 +17,7 @@
                         $con = connectDB(); 
                         $id_next = $_GET['id'];
                         echo $id_next;
-                        $query = "select * from products where \"\"";
+                        $query = "SELECT * FROM products WHERE \"pdID\"='$id_next'";
                         $result = pg_query($con, $query);
                         $row = pg_fetch_assoc($result);
                         
