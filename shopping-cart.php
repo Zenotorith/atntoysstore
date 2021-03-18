@@ -51,16 +51,18 @@
                                 <h3>Summary</h3>
                                 <?php
                                 $item_quantity = $_POST['quantity'];
-                                $total = $item_quantity * $row['pdPrice'];
+                                $subtotal = $item_quantity * $row['pdPrice'];
+                                $total = $item_quantity * $row['pdPrice']*10/100+2;
                                 $_SESSION["item_name"] = $row['pdName'];
 	                            $_SESSION["total"] = $total;
                                 ?>
-                                <h4><span class="text">Subtotal</span><span class="price"><?php echo $row['pdPrice'];?></span></h4>
-                                <h4><span class="text">Discount</span><span class="price">$0</span></h4>
-                                <h4><span class="text">Shipping</span><span class="price">$0</span></h4>
+                                <h4><span class="text">Subtotal</span><span class="price"><?php echo $subtotal;?></span></h4>
+                                <h4><span class="text">Discount</span><span class="price">10%</span></h4>
+                                <h4><span class="text">Shipping</span><span class="price">$2</span></h4>
                                 <h4><span class="text">Total</span><span class="price"><?php echo $total?></span></h4>
                                 <form method="post" action="invoice.php">
-                                <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Customer name" ></div>
+                                <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Fill your name here..." ></div>
+                                <div class="form-group"><input class="form-control" type="text" name="address" placeholder="Fill your address here..." ></div>
                                 <button class="btn btn-primary btn-block btn-lg" type="submit" name="saving">Checkout</button>
                                 </form>
                             </div>
