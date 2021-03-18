@@ -15,7 +15,9 @@
                     <?php 
                         require_once 'connectDB.php'; 
                         $con = connectDB(); 
-                        $query = "select * from products";
+                        $id_next = $_GET['id'];
+                        echo $id_next;
+                        $query = "select * from products where \"\"";
                         $result = pg_query($con, $query);
                         $row = pg_fetch_assoc($result);
                         
@@ -51,11 +53,14 @@
                                 <?php
                                 $item_quantity = $_POST['quantity'];
                                 $total = $item_quantity * $row['pdPrice'];
+                                $_SESSION["item_"] = $values["item_name"];
+	                             $_SESSION["total"] = $total;
                                 ?>
                                 <h4><span class="text">Subtotal</span><span class="price"><?php echo $row['pdPrice'];?></span></h4>
                                 <h4><span class="text">Discount</span><span class="price">$0</span></h4>
                                 <h4><span class="text">Shipping</span><span class="price">$0</span></h4>
-                                <h4><span class="text">Total</span><span class="price"><?php echo $total?></span></h4><button class="btn btn-primary btn-block btn-lg" type="button">Checkout</button>
+                                <h4><span class="text">Total</span><span class="price"><?php echo $total?></span></h4>
+                                <button class="btn btn-primary btn-block btn-lg" type="button">Checkout</button>
                             </div>
                         </div>
                     </div>
