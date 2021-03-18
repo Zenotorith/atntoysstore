@@ -29,7 +29,7 @@
                                     <h3><?=$row['pdName']; ?></h3>
                                     <div class="price">
                                         <h3>$<?=$row['pdPrice']; ?></h3>
-                                    </div><button class="btn btn-primary" type="submit" style="background-color: rgb(45,45,45);"><i class="icon-basket"></i>Add to Cart</button>
+                                    </div><button class="btn btn-primary" type="submit"name="add_to_cart" style="background-color: rgb(45,45,45);"><i class="icon-basket"></i>Add to Cart</button>
                                     <div class="summary">
                                         <p>Place order this product in 2 steps:<br>-Step 1: press button 'Add to Cart' to place this product into your basket<br>-Step 2: if Step 1 not working, contract us at 'Contract Us' in navigation bar or through the hotline: 1800-xxxx</p>
                                     </div>
