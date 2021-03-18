@@ -38,7 +38,7 @@
                                           <form method="post" action="shopping-cart.php">
                                              <label class="d-none d-md-block" for="quantity">Quantity</label>
                                              <input type="number" name="quantity" id="number" class="form-control quantity-input" value="1"><br>
-                                             <button type="submit" name="add_item" class="text-info">Add item</button>
+                                             <button type="submit" name="add_item" class="btn btn-primary btn-block btn-md text-info">Add item</button>
                                            </form>
                                         </div>         
                                     </div>
@@ -59,7 +59,10 @@
                                 <h4><span class="text">Discount</span><span class="price">$0</span></h4>
                                 <h4><span class="text">Shipping</span><span class="price">$0</span></h4>
                                 <h4><span class="text">Total</span><span class="price"><?php echo $total?></span></h4>
-                                <form method="post" action="invoice.php"><button class="btn btn-primary btn-block btn-lg" type="submit" name="saving">Checkout</button></form>
+                                <form method="post" action="invoice.php">
+                                <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Customer name" ></div>
+                                <button class="btn btn-primary btn-block btn-lg" type="submit" name="saving">Checkout</button>
+                                </form>
                             </div>
                         </div>
                     </div>
