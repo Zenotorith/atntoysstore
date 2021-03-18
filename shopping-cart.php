@@ -59,7 +59,7 @@
                                 <h4><span class="text">Discount</span><span class="price">$0</span></h4>
                                 <h4><span class="text">Shipping</span><span class="price">$0</span></h4>
                                 <h4><span class="text">Total</span><span class="price"><?php echo $total?></span></h4>
-                                <button method="post" action="invoice.php" class="btn btn-primary btn-block btn-lg" type="submit" name="saving">Checkout</button>
+                                <form method="post" action="invoice.php"><button class="btn btn-primary btn-block btn-lg" type="submit" name="saving">Checkout</button></form>
                             </div>
                         </div>
                     </div>
