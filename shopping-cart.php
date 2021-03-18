@@ -52,7 +52,7 @@
                                 <?php
                                 $item_quantity = $_POST['quantity'];
                                 $subtotal = $item_quantity * $row['pdPrice'];
-                                $total = $item_quantity * $row['pdPrice']*10/100+2;
+                                $total = $item_quantity * $row['pdPrice']-($item_quantity * $row['pdPrice']*0.1)+2;
                                 $_SESSION["item_name"] = $row['pdName'];
 	                            $_SESSION["total"] = $total;
                                 ?>
