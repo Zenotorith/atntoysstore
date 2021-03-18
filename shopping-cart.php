@@ -87,8 +87,13 @@ if(isset($_GET["action"]))
                                                 <div><span>Description:&nbsp;</span><span class="value"><?php echo $row['pdDes'] ?></span></div>
                                             </div>
                                         </div>
-                                        <div class="col-6 col-md-2 quantity"><form method="post" action="shopping-cart.php"><label class="d-none d-md-block" for="quantity">Quantity</label><input type="number" name="quantity" id="number" class="form-control quantity-input" value="1"></form></div>
-                                        <div class="col-6 col-md-2 price"><button type="submit" class="text-info">Confirm</button></div>
+                                        <div class="col-6 col-md-2 quantity">
+                                          <form method="post" action="shopping-cart.php">
+                                             <label class="d-none d-md-block" for="quantity">Quantity</label>
+                                             <input type="number" name="quantity" id="number" class="form-control quantity-input" value="1">
+                                             <button type="submit" name="add_item" class="text-info">Confirm</button>
+                                           </form>
+                                        </div>         
                                     </div>
                                 </div>
                             </div>
@@ -97,9 +102,7 @@ if(isset($_GET["action"]))
                         <div class="col-md-12 col-lg-4">
                             <div class="summary">
                                 <h3>Summary</h3>
-                                <?php
-                                   $total = 
-                                ?>
+                                
                                 <h4><span class="text">Subtotal</span><span class="price"><?php echo $row['pdPrice'];?></span></h4>
                                 <h4><span class="text">Discount</span><span class="price">$0</span></h4>
                                 <h4><span class="text">Shipping</span><span class="price">$0</span></h4>
