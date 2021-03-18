@@ -1,63 +1,9 @@
 <?php
-    session_start();
+
     require "header.php"
   
 ?>
 
-<?php
-require_once 'connectDB.php';
-$con = connectDB();
-
-if(isset($_POST["add_to_cart"]))
-{
-	if(isset($_SESSION["shopping_cart"]))
-	{
-		$item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
-		if(!in_array($_GET["id"], $item_array_id))
-		{
-			$count = count($_SESSION["shopping_cart"]);
-			$item_array = array(
-				'item_id'			=>	$_GET["id"],
-				'item_name'			=>	$_POST["hidden_name"],
-				'item_price'		=>	$_POST["hidden_price"],
-				'item_quantity'		=>	$_POST["quantity"]
-			);
-			$_SESSION["shopping_cart"][$count] = $item_array;
-		}
-		else
-		{
-			echo '<script>alert("Item Already Added")</script>';
-		}
-	}
-	else
-	{
-		$item_array = array(
-			'item_id'			=>	$_GET["id"],
-			'item_name'			=>	$_POST["hidden_name"],
-			'item_price'		=>	$_POST["hidden_price"],
-			'item_quantity'		=>	$_POST["quantity"]
-		);
-		$_SESSION["shopping_cart"][0] = $item_array;
-	}
-}
-
-if(isset($_GET["action"]))
-{
-	if($_GET["action"] == "delete")
-	{
-		foreach($_SESSION["shopping_cart"] as $keys => $values)
-		{
-			if($values["item_id"] == $_GET["id"])
-			{
-				unset($_SESSION["shopping_cart"][$keys]);
-				echo '<script>alert("Item Removed")</script>';
-				echo '<script>window.location="index.php"</script>';
-			}
-		}
-	}
-}
-
-?>
 <body>
     <main class="page shopping-cart-page">
         <section class="clean-block clean-cart dark">
@@ -90,8 +36,8 @@ if(isset($_GET["action"]))
                                         <div class="col-6 col-md-2 quantity">
                                           <form method="post" action="shopping-cart.php">
                                              <label class="d-none d-md-block" for="quantity">Quantity</label>
-                                             <input type="number" name="quantity" id="number" class="form-control quantity-input" value="1"><br><br>
-                                             <button type="submit" name="add_item" class="text-info" value="Add_item">Confirm</button>
+                                             <input type="number" name="quantity" id="number" class="form-control quantity-input" value="1"><br>
+                                             <button type="submit" name="add_item" class="text-info">Add item</button>
                                            </form>
                                         </div>         
                                     </div>
@@ -102,11 +48,14 @@ if(isset($_GET["action"]))
                         <div class="col-md-12 col-lg-4">
                             <div class="summary">
                                 <h3>Summary</h3>
-                                
+                                <?php
+                                $item_quantity = $_POST['quantity'];
+                                $total = $item_quantity * $row['pdPrice'];
+                                ?>
                                 <h4><span class="text">Subtotal</span><span class="price"><?php echo $row['pdPrice'];?></span></h4>
                                 <h4><span class="text">Discount</span><span class="price">$0</span></h4>
                                 <h4><span class="text">Shipping</span><span class="price">$0</span></h4>
-                                <h4><span class="text">Total</span><span class="price">$360</span></h4><button class="btn btn-primary btn-block btn-lg" type="button">Checkout</button>
+                                <h4><span class="text">Total</span><span class="price"><?php echo $total?></span></h4><button class="btn btn-primary btn-block btn-lg" type="button">Checkout</button>
                             </div>
                         </div>
                     </div>
