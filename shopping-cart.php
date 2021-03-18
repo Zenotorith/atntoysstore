@@ -90,8 +90,8 @@ if(isset($_GET["action"]))
                                         <div class="col-6 col-md-2 quantity">
                                           <form method="post" action="shopping-cart.php">
                                              <label class="d-none d-md-block" for="quantity">Quantity</label>
-                                             <input type="number" name="quantity" id="number" class="form-control quantity-input" value="1">
-                                             <button type="submit" name="add_item" class="text-info">Confirm</button>
+                                             <input type="number" name="quantity" id="number" class="form-control quantity-input" value="1"><br><br>
+                                             <button type="submit" name="add_item" class="text-info" value="Add_item">Confirm</button>
                                            </form>
                                         </div>         
                                     </div>
