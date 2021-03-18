@@ -55,7 +55,7 @@
                 <a href="about-us.php" class="nav-link">About</a>
               </li>
               <li class="nav-item">
-                <a href="index.php#contract" class="nav-link">Contact</a>
+                <a href="index.php#contract" class="nav-link">Contract</a>
               </li>
                 <li class="nav-item">
                   <a href="shopping-cart.php" class="nav-link"><i class="fas fa-shopping-cart fa-2x"></i></a>
